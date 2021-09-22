@@ -1,0 +1,22 @@
+h1 {
+    text-align: center;
+    padding: 10px;
+}
+
+
+.form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.form-group {
+    padding: 10px;
+}
+
+.form-box {
+    padding: 10px;
+}
+
+
+
