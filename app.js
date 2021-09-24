@@ -14,19 +14,8 @@ app.use(express.urlencoded({extended: false}));
 
 app.set('view engine', 'ejs');
 
-app.get('/', (req, res) => {
-    res.render('index');
-});
+const home = require('./routes/home');
 
-app.get('/search/:searchTerm', (req, res) => {
-    res.render('search', {data : {searchTerm : req.params.searchTerm,
-    searchResults: ['result1', 'result2']}})
-});
-
-app.post('/', (req, res) => {
-    console.log(req.body);
-    //work on database
-    res.send('data post successful')
-});
+app.use('/', home)
 
 app.listen(3000);
