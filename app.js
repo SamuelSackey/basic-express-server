@@ -18,6 +18,11 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
+app.get('/search/:searchTerm', (req, res) => {
+    res.render('search', {data : {searchTerm : req.params.searchTerm,
+    searchResults: ['result1', 'result2']}})
+});
+
 app.post('/', (req, res) => {
     console.log(req.body);
     //work on database
