@@ -12,8 +12,10 @@ app.use(express.urlencoded({extended: false}));
 // parses the data from the post and attaches it to req.bod
 // extended is set to false since the data from the post is not complex
 
+app.set('view engine', 'ejs');
+
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'static', 'index.html'));
+    res.render('index');
 });
 
 app.post('/', (req, res) => {
